@@ -1,0 +1,283 @@
+:root{
+
+  
+
+
+
+
+    --happy:#FFD700;
+    --sad:#5D6D7E;
+    --angry:#E74C3C;
+    --calm:	#A3E4D7;
+    --motivated:#28B463;
+    --stressed:#85C1E9;
+    --excited:#FF6B6B;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    transition: background-color 0.5s ease;
+
+}
+
+
+
+
+.header{
+    font-family: baby;
+    background: linear-gradient(65deg, var(--excited), var(--motivated),var(--stressed), var(--happy),var(--calm));
+    background-clip: text;
+    color: transparent;
+    animation: gradientmove 30s linear infinite;
+    background-size: 200% auto;
+}
+
+
+@font-face {
+    font-family: 'cute';
+    src: url(/fonts/cute.ttf);
+}
+
+@font-face {
+    font-family: 'baby';
+    src: url(/fonts/baby.ttf);
+}
+
+@font-face {
+    font-family: 'lovely';
+    src: url(/fonts/Cute\ lovely.ttf);
+}
+
+
+
+@font-face {
+    font-family: 'magic';
+    src: url(/fonts/Magic\ Bubble.ttf);
+}
+.messege{
+    font-family: magic;
+    text-shadow: 1px 1px 3px black  ;
+
+}
+
+.moodbtn{
+    font-family: cute;
+    font-size: large;
+
+
+   
+    #sad{
+        animation: sad 3s linear infinite;
+    }
+
+    #angry{
+        animation: angry 3s linear infinite;
+    }
+    
+    .calm{
+        animation: calm 3s linear infinite;
+    }
+    .motivated{
+        animation: moti 1s linear infinite;
+    }
+
+    .stress{
+        animation: stressed 3s linear infinite;
+    }
+.excited{
+    animation: excited 3s linear infinite;
+}
+
+}
+
+
+.Mymood{
+    font-family: lovely;
+
+      
+}
+
+
+
+
+.motivation{
+    font-family: cute;
+    animation: motivation 7s linear infinite;
+}
+
+input{
+    border: 1px solid #b1acac;
+    font-family: cute;
+
+   
+}
+
+.submit{
+    font-family: magic;
+}
+
+
+
+
+.submit:hover{
+
+    transform: translateX(8px);
+    border-radius: 0.5rem;
+   
+}
+
+
+.History{
+    font-family: magic;
+    color: rgb(31, 172, 177);
+}
+
+
+/* all the animations are here  */
+
+
+
+
+
+
+@keyframes sad{
+ to{
+    transform: rotate(360deg);
+ }
+}
+
+
+@keyframes angry {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10% {
+      transform: translateX(-4px);
+    }
+    20% {
+      transform: translateX(4px);
+    }
+    30% {
+      transform: translateX(-6px);
+    }
+    40% {
+      transform: translateX(6px);
+      color: #e74c3c;
+    }
+    50% {
+      transform: scale(1.2);
+      color: #c0392b;
+    }
+    60% {
+      transform: scale(1);
+      color: #e74c3c;
+    }
+  }
+
+
+@keyframes calm{
+
+    25%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-45deg);
+
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
+
+}
+
+@keyframes moti {
+    25%{
+        transform: scale(92%);
+
+    }
+   50%{
+    transform: scale(100%);
+
+   }
+   75%{
+    transform: scale(108%);
+
+   }
+   100%{
+    transform: scale(100%);
+   }
+}
+
+
+@keyframes stressed {
+    0%   { transform: translate(0, 0) scale(1); }
+    10%  { transform: translate(-2px, -1px) scale(1.01); }
+    20%  { transform: translate(3px, 2px) scale(0.99); }
+    30%  { transform: translate(-3px, 1px) scale(1.02); }
+    40%  { transform: translate(2px, -2px) scale(1); }
+    50%  { transform: translate(-1px, 2px) scale(1.01); }
+    60%  { transform: translate(1px, -1px) scale(0.98); }
+    70%  { transform: translate(-2px, 1px) scale(1.01); }
+    80%  { transform: translate(2px, 2px) scale(1); }
+    90%  { transform: translate(-1px, -1px) scale(1.02); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+
+
+
+
+@keyframes excited {
+  0%   { transform: scale(1) translateY(0); }
+  20%  { transform: scale(1.1) translateY(-6px); }
+  40%  { transform: scale(1) translateY(0); }
+  60%  { transform: scale(1.05) translateY(-6px); }
+  80%  { transform: scale(1) translateY(0); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+
+
+
+@keyframes motivation {
+
+    25%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
+
+}
+
+  @keyframes gradientmove {
+    0%{
+        background-position: 0%;
+    }
+    50%{
+        background-position: 100%;
+    }
+    100%{
+        background-position: 0%;
+    }
+    
+  }
+  
+
+  
