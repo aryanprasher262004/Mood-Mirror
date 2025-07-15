@@ -11,7 +11,7 @@
     --calm:	#A3E4D7;
     --motivated:#28B463;
     --stressed:#85C1E9;
-    --excited:#FF6B6B;
+    --excited:#a232e3;
 }
 
 *{
@@ -20,16 +20,33 @@
     box-sizing: border-box;
 }
 
-body{
-    transition: background-color 0.5s ease;
 
+body{
+    
+    background: linear-gradient(
+        to right,
+        #FFB6C1,  /* Light Pink */
+        #FF69B4,  /* Hot Pink */
+        #FF6F61,  /* Coral Rose */
+        #FF8DAA   /* Pinky Salmon */
+      );
+  
+}
+
+.gradientChange{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: riseUp 1.5s ease-in-out forwards;
 }
 
 
-
-
 .header{
-    font-family: baby;
+    font-family: star;
     background: linear-gradient(65deg, var(--excited), var(--motivated),var(--stressed), var(--happy),var(--calm));
     background-clip: text;
     color: transparent;
@@ -37,6 +54,10 @@ body{
     background-size: 200% auto;
 }
 
+
+.middle-card{
+    box-shadow: 20px 20px  20px rgba(0, 0, 0, 0.4);
+}
 
 @font-face {
     font-family: 'cute';
@@ -53,6 +74,11 @@ body{
     src: url(/fonts/Cute\ lovely.ttf);
 }
 
+@font-face {
+    font-family: 'star';
+    src: url(/fonts/Shooting\ Star.ttf);
+}
+
 
 
 @font-face {
@@ -60,7 +86,9 @@ body{
     src: url(/fonts/Magic\ Bubble.ttf);
 }
 .messege{
-    font-family: magic;
+    font-family: star;
+    letter-spacing: 2px;
+    color: #ddcece;
     text-shadow: 1px 1px 3px black  ;
 
 }
@@ -95,6 +123,11 @@ body{
 
 }
 
+
+button{
+    max-width: 100px;
+    width: 100%;
+}
 
 .Mymood{
     font-family: lovely;
@@ -278,6 +311,16 @@ input{
     }
     
   }
-  
 
-  
+
+@keyframes riseUp {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0.6;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    
+}
