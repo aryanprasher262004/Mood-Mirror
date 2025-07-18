@@ -25,10 +25,10 @@ body{
     
     background: linear-gradient(
         to right,
-        #FFB6C1,  /* Light Pink */
-        #FF69B4,  /* Hot Pink */
-        #FF6F61,  /* Coral Rose */
-        #FF8DAA   /* Pinky Salmon */
+        #FFB6C1,  
+        #FF69B4, 
+        #FF6F61,  
+        #FF8DAA  
       );
   
 }

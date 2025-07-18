@@ -60,6 +60,12 @@ function setMood(mood){
     document.getElementById("myMood").innerText=  "I am    " + myMood;
 
 
+
+    const entry = `${new Date().toLocaleString()} - ${mood.toUpperCase()}`;
+    moodHistory.push(entry);
+    localStorage.setItem("moodHistory", JSON.stringify(moodHistory));
+    renderHistory();
+
 }
 
 function saveCustomQuote(){
@@ -73,6 +79,19 @@ function saveCustomQuote(){
     }
 }
 
+
+function renderHistory() {
+  const historyList = document.getElementById("historyList");
+  historyList.innerHTML = "";
+  moodHistory.slice(-10).reverse().forEach(entry => {
+    const li = document.createElement("li");
+    li.textContent = entry;
+    historyList.appendChild(li);
+  });
+}
+
+
+renderHistory();
 
 
 
